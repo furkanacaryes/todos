@@ -9,6 +9,8 @@ export * from "@Redux/IAction";
 export * from "@Redux/IStore";
 // #endregion Redux Interfaces
 
+export * from "./Shared/Todo";
+
 // #region Service Interfaces
 export * from "@Services/API/Http/Http";
 export * from "@Services/API/Planetary/ApodPayload";

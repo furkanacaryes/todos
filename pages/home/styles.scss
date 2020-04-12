@@ -1,0 +1,55 @@
+@mixin shadow-radius-box {
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.home-page {
+    padding: 32px;
+    display: flex; // default row
+
+    section {
+        min-width: 360px;
+        margin-right: 32px;
+
+        &.completeds {
+            .list {
+                margin-top: 53px;
+            }
+        }
+    }
+
+    .form {
+        display: flex;
+
+        input {
+            @include shadow-radius-box();
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: unset;
+        }
+
+        // button
+        input[type="button"] {
+            background-color: blue;
+            color: white;
+            height: 37px;
+            padding: 0 16px;
+            margin-left: 8px;
+        }
+    }
+
+    .list {
+        @include shadow-radius-box();
+        margin: 16px 0;
+        padding: 16px;
+
+        li {
+            list-style: none;
+            display: flex;
+        }
+    }
+}
